@@ -8,12 +8,7 @@
 </head>
 <body>
     <div id="homepage">
-        <div id="greeting" class="in_con">
-            <h1>Welcome to the Employee Time-Tracker!</h1>
-            <p>Track your hours - organize by project - analyze how your time was spent!</p>
-            <p>All in one application!</p>
-            <p>If you do not have a username and password (or if you've forgotten yours) contact the site administrator</p>
-        </div>
+        
         <div id="log" class="in_con">
             <form id="login" action="{% url 'login:logged' %}" method="post">
                 {% csrf_token %}
