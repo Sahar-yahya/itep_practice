@@ -9,33 +9,7 @@
 <body>
     <div id="homepage">
         
-        <div id="log" class="in_con">
-            <form id="login" action="{% url 'login:logged' %}" method="post">
-                {% csrf_token %}
-                <h1>Log in</h1>
-                <input type="text" maxlength="100" name="in_user" placeholder="Username" autocomplete="off"><br><br>
-                <input type="password" maxlength="100" name="in_pass" placeholder="Password" autocomplete="off" id="in_pass"><br>
-                <br>
-                <input type="checkbox" onclick="tog_pass()">Show Password<br>
-                <button type="submit">Log in</button>
-            </form><br>
-            {% if messages %}
-                 {% for message in messages %}
-                 <p class="{{ message.tags }}" >{{ message }}</p><br>
-                 {% endfor %}
-             {% endif %}
-        </div>
-    </div>
-
-    <script>
-        function tog_pass() {
-            var x = document.getElementById("in_pass");
-            if (x.type === "password") {
-                x.type = "text";
-            } else {
-                x.type = "password";
-            }
-        }
+        
     </script>
 </body>
 </html>
